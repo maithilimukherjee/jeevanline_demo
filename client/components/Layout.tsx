@@ -25,7 +25,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-10 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
         <div className="mx-auto max-w-md px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            {useLocation && (() => null)()}
             <HeaderLeft />
             <div className="font-extrabold text-xl tracking-tight"><span className="text-primary">Jeevan</span>Line</div>
           </div>
@@ -84,6 +83,17 @@ function LangPill({ code, active, onClick, children }: { code: string; active: b
     >
       {children}
     </button>
+  );
+}
+
+function HeaderLeft() {
+  const loc = useLocation();
+  if (loc.pathname === "/") return null;
+  return (
+    <Link to="/" className="inline-flex items-center gap-2 rounded-full px-3 py-2 bg-secondary text-secondary-foreground">
+      <ArrowLeft className="w-4 h-4" />
+      <span className="text-sm font-semibold">Dashboard</span>
+    </Link>
   );
 }
 
