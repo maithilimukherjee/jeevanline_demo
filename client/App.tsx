@@ -20,23 +20,25 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/journal" element={<Journal />} />
-          <Route path="/symptom" element={<SymptomChecker />} />
-          <Route path="/doctor" element={<DoctorConnect />} />
-          <Route path="/pharmacy" element={<PharmacyFinder />} />
-          <Route path="/emergency" element={<EmergencyHelp />} />
-          <Route path="/learning" element={<LearningHub />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <LangProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/journal" element={<Journal />} />
+            <Route path="/symptom" element={<SymptomChecker />} />
+            <Route path="/doctor" element={<DoctorConnect />} />
+            <Route path="/pharmacy" element={<PharmacyFinder />} />
+            <Route path="/emergency" element={<EmergencyHelp />} />
+            <Route path="/learning" element={<LearningHub />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </LangProvider>
   </QueryClientProvider>
 );
 
