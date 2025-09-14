@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useLang } from "@/hooks/useLang";
 import SyncStatus from "@/components/SyncStatus";
 import { cn } from "@/lib/utils";
-import { Volume2, VolumeX, Moon, Sun } from "lucide-react";
+import { Volume2, VolumeX, Moon, Sun, ArrowLeft } from "lucide-react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const { lang, setLang } = useLang();
