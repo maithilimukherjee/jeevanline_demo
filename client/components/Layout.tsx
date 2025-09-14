@@ -24,7 +24,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-dvh bg-background text-foreground flex flex-col">
       <header className="sticky top-0 z-10 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
         <div className="mx-auto max-w-md px-4 py-3 flex items-center justify-between">
-          <div className="font-extrabold text-xl tracking-tight"><span className="text-primary">Jeevan</span>Line</div>
+          <div className="flex items-center gap-3">
+            {useLocation && (() => null)()}
+            <HeaderLeft />
+            <div className="font-extrabold text-xl tracking-tight"><span className="text-primary">Jeevan</span>Line</div>
+          </div>
           <div className="flex items-center gap-2">
             <LangPill code="EN" active={lang === "EN"} onClick={() => setLang("EN")}>
               EN
