@@ -14,6 +14,7 @@ import PharmacyFinder from "./pages/PharmacyFinder";
 import EmergencyHelp from "./pages/EmergencyHelp";
 import LearningHub from "./pages/LearningHub";
 import NotFound from "./pages/NotFound";
+import { LangProvider } from "@/hooks/useLang";
 
 const queryClient = new QueryClient();
 
