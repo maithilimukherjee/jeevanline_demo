@@ -29,7 +29,10 @@ export default function Teleconsultation() {
   const avg = 8; // min per consult
 
   const position = 3; // user's place in queue (mock)
-  const estUserWait = useMemo(() => queue.slice(0, position).reduce((s, p) => s + p.minutes, 0), [queue, position]);
+  const estUserWait = useMemo(
+    () => queue.slice(0, position).reduce((s, p) => s + p.minutes, 0),
+    [queue, position],
+  );
 
   return (
     <Layout>
@@ -39,11 +42,25 @@ export default function Teleconsultation() {
             <div>
               <div className="text-sm opacity-70">{t("doctorAppointed")}</div>
               <div className="text-lg font-bold">Dr. Sharma (MBBS)</div>
-              <div className="text-sm opacity-70">{t("waitingTime")}: ~{estUserWait} min · {t("queuePosition")}: {position + 1}</div>
+              <div className="text-sm opacity-70">
+                {t("waitingTime")}: ~{estUserWait} min · {t("queuePosition")}:{" "}
+                {position + 1}
+              </div>
             </div>
             <div className="flex flex-col gap-2 w-40">
-              <Button className="rounded-full w-full" variant="secondary" onClick={() => alert("Starting audio call...")}>{t("audioCall")}</Button>
-              <Button className="rounded-full w-full" onClick={() => alert("Starting video call...")}>{t("videoCall")}</Button>
+              <Button
+                className="rounded-full w-full"
+                variant="secondary"
+                onClick={() => alert("Starting audio call...")}
+              >
+                {t("audioCall")}
+              </Button>
+              <Button
+                className="rounded-full w-full"
+                onClick={() => alert("Starting video call...")}
+              >
+                {t("videoCall")}
+              </Button>
             </div>
           </div>
         </section>
@@ -60,12 +77,21 @@ export default function Teleconsultation() {
               <div className="text-sm opacity-70">{t("noRooms")}</div>
             ) : (
               ROOMS.map((r, i) => (
-                <div key={i} className="flex items-center justify-between rounded-xl border p-3">
+                <div
+                  key={i}
+                  className="flex items-center justify-between rounded-xl border p-3"
+                >
                   <div>
                     <div className="font-semibold">{r.condition}</div>
-                    <div className="text-xs opacity-70">{r.people} people · {t("estWait")}: ~{r.wait} min</div>
+                    <div className="text-xs opacity-70">
+                      {r.people} people · {t("estWait")}: ~{r.wait} min
+                    </div>
                   </div>
-                  <Button size="sm" className="rounded-full" onClick={() => alert(`Joining group room: ${r.condition}`)}>
+                  <Button
+                    size="sm"
+                    className="rounded-full"
+                    onClick={() => alert(`Joining group room: ${r.condition}`)}
+                  >
                     {t("joinGroup")}
                   </Button>
                 </div>
@@ -74,7 +100,10 @@ export default function Teleconsultation() {
           </div>
         </section>
 
-        <div className="text-xs opacity-60">Avg consult ~{avg} min. Poor network? Call switches to audio automatically.</div>
+        <div className="text-xs opacity-60">
+          Avg consult ~{avg} min. Poor network? Call switches to audio
+          automatically.
+        </div>
       </div>
     </Layout>
   );
