@@ -68,10 +68,7 @@ export default function SymptomChecker() {
             </div>
             <div className="grid grid-cols-1 gap-3 pt-2">
               <Button className="w-full rounded-full py-6" onClick={onRemedies}>{t("homeRemedies")}</Button>
-              <Button className="w-full rounded-full py-6" variant="secondary" asChild>
-                <a href="/doctor">{t("bookDoctor")}</a>
-              </Button>
-              <Button className="w-full rounded-full py-6" variant="outline">{t("sendLogCHW")}</Button>
+              <Button className="w-full rounded-full py-6" variant="secondary" onClick={() => alert("Sent to CHW only.")}>{t("sendLogCHW")}</Button>
             </div>
           </div>
         )}
