@@ -13,6 +13,7 @@ import PrescriptionPassbook from "./pages/PrescriptionPassbook";
 import PharmacyFinder from "./pages/PharmacyFinder";
 import EmergencyHelp from "./pages/EmergencyHelp";
 import LearningHub from "./pages/LearningHub";
+import Teleconsultation from "./pages/Teleconsultation";
 import NotFound from "./pages/NotFound";
 import { LangProvider } from "@/hooks/useLang";
 
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="/pharmacy" element={<PharmacyFinder />} />
             <Route path="/emergency" element={<EmergencyHelp />} />
             <Route path="/learning" element={<LearningHub />} />
+            <Route path="/teleconsult" element={<Teleconsultation />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
