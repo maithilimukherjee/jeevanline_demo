@@ -84,7 +84,7 @@ const dict: Dictionary = {
   stepOf: { EN: "Step {x} of {y}", HI: "कदम {x} / {y}", PA: "ਕਦਮ {x} / {y}" },
   probable: {
     EN: "Probable Conditions",
-    HI: "संभावित स्थितियाँ",
+    HI: "संभावि��� स्थितियाँ",
     PA: "ਸੰਭਾਵਿਤ ਹਾਲਤਾਂ",
   },
   preventive: { EN: "Preventive", HI: "निवारक", PA: "ਰੋਕਥਾਮ" },
@@ -109,7 +109,7 @@ const dict: Dictionary = {
   filters: { EN: "Filters", HI: "फ़िल्टर", PA: "ਫਿਲਟਰ" },
   newCases: { EN: "New", HI: "नया", PA: "ਨਵਾਂ" },
   followUps: { EN: "Follow-ups", HI: "फॉलो-अप", PA: "ਫਾਲੋ-ਅੱਪ" },
-  chwRef: { EN: "CHW Referrals", HI: "सीएचडब्ल्यू रेफरल", PA: "CHW ਰੈਫਰਲ" },
+  chwRef: { EN: "CHW Referrals", HI: "सीएचडब्ल्यू रेफरल", PA: "CHW ਰੈ���ਰਲ" },
   communityRoom: {
     EN: "Join Community Room",
     HI: "कम्युनिटी रूम में जुड़ें",
@@ -134,7 +134,7 @@ const dict: Dictionary = {
     HI: "विकल्प सुझाएँ",
     PA: "ਵਿਕਲਪ ਸੁਝਾਓ",
   },
-  callHelp: { EN: "Call for Help", HI: "मदद के लिए कॉल", PA: "ਮਦਦ ਲਈ ਕਾਲ" },
+  callHelp: { EN: "Call for Help", HI: "मदद के लिए कॉल", PA: "���ਦਦ ਲਈ ਕਾਲ" },
   requestTransport: {
     EN: "Request Transport Aid",
     HI: "परिवहन सहायता का अनुरोध",
@@ -151,6 +151,14 @@ const dict: Dictionary = {
     HI: "उच्च कंट्रास्ट",
     PA: "ਉੱਚ ਕਾਂਟ੍ਰਾਸਟ",
   },
+  teleconsult: { EN: "Teleconsultation", HI: "टेली कंसल्टेशन", PA: "ਟੈਲੀਕੰਸਲਟੇਸ਼ਨ" },
+  startCall: { EN: "Start Call", HI: "कॉल शुरू करें", PA: "ਕਾਲ ਸ਼ੁਰੂ ਕਰੋ" },
+  joinGroup: { EN: "Join Group Consultation", HI: "ग्रुप कंसल्टेशन में जुड़ें", PA: "ਗਰੁੱਪ ਕਨਸਲਟੇਸ਼ਨ ਵਿਚ ਸ਼ਾਮਲ ਹੋਵੋ" },
+  estWait: { EN: "Estimated wait", HI: "अनुमानित प्रतीक्षा", PA: "ਅੰਦਾਜ਼ੇ ਦਾ ਇੰਤਜ਼ਾਰ" },
+  queuePosition: { EN: "Queue position", HI: "कतार स्थान", PA: "ਕਤਾਰ ਸਥਾਨ" },
+  groupRooms: { EN: "Community Rooms", HI: "कम्युनिटी रूम", PA: "ਕਮਿਊਨਿਟੀ ਰੂਮ" },
+  byCondition: { EN: "by condition", HI: "स्थिति के अनुसार", PA: "ਹਾਲਤ ਅਨੁਸਾਰ" },
+  noRooms: { EN: "No active rooms", HI: "कोई सक्रिय रूम नहीं", PA: "ਕੋਈ ਸਰਗਰਮ ਰੂਮ ਨਹੀਂ" },
 };
 
 const LangContext = createContext<{
