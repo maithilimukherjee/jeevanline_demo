@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { TriageBadge } from "@/components/TriageBadge";
 import { useLang } from "@/hooks/useLang";
 import React, { useMemo, useState } from "react";
 
