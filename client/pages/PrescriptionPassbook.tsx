@@ -33,7 +33,8 @@ export default function PrescriptionPassbook() {
   }, [items]);
 
   const add = (e: Entry) => setItems((prev) => [e, ...prev]);
-  const remove = (id: string) => setItems((prev) => prev.filter((x) => x.id !== id));
+  const remove = (id: string) =>
+    setItems((prev) => prev.filter((x) => x.id !== id));
 
   return (
     <Layout>
@@ -43,19 +44,35 @@ export default function PrescriptionPassbook() {
         <div className="space-y-2">
           <h2 className="font-semibold">{t("yourPrescriptions")}</h2>
           {items.length === 0 ? (
-            <div className="text-sm opacity-70">No prescriptions saved yet.</div>
+            <div className="text-sm opacity-70">
+              No prescriptions saved yet.
+            </div>
           ) : (
             items.map((it) => (
               <div key={it.id} className="rounded-xl border p-4">
                 <div className="flex items-center justify-between">
                   <div className="font-semibold">{it.medicine}</div>
-                  <div className="text-xs opacity-70">{new Date(it.dateISO).toLocaleDateString()}</div>
+                  <div className="text-xs opacity-70">
+                    {new Date(it.dateISO).toLocaleDateString()}
+                  </div>
                 </div>
-                <div className="mt-1 text-sm">{t("dosage")}: {it.dosage}</div>
-                <div className="text-sm">{t("duration")}: {it.duration}</div>
-                {it.notes && <div className="text-sm opacity-80 mt-1">{t("notes")}: {it.notes}</div>}
+                <div className="mt-1 text-sm">
+                  {t("dosage")}: {it.dosage}
+                </div>
+                <div className="text-sm">
+                  {t("duration")}: {it.duration}
+                </div>
+                {it.notes && (
+                  <div className="text-sm opacity-80 mt-1">
+                    {t("notes")}: {it.notes}
+                  </div>
+                )}
                 <div className="pt-2 text-right">
-                  <Button size="sm" variant="secondary" onClick={() => remove(it.id)}>
+                  <Button
+                    size="sm"
+                    variant="secondary"
+                    onClick={() => remove(it.id)}
+                  >
                     {t("delete")}
                   </Button>
                 </div>
@@ -97,11 +114,29 @@ function AddForm({ onAdd }: { onAdd: (e: Entry) => void }) {
   return (
     <div className="rounded-2xl border p-4 space-y-3">
       <div className="font-semibold">{t("addPrescription")}</div>
-      <VoiceInput value={medicine} onChange={setMedicine} placeholder={t("medicine")}/>
-      <VoiceInput value={dosage} onChange={setDosage} placeholder={t("dosage")} />
-      <VoiceInput value={duration} onChange={setDuration} placeholder={t("duration")} />
+      <VoiceInput
+        value={medicine}
+        onChange={setMedicine}
+        placeholder={t("medicine")}
+      />
+      <VoiceInput
+        value={dosage}
+        onChange={setDosage}
+        placeholder={t("dosage")}
+      />
+      <VoiceInput
+        value={duration}
+        onChange={setDuration}
+        placeholder={t("duration")}
+      />
       <VoiceInput value={notes} onChange={setNotes} placeholder={t("notes")} />
-      <Button className="w-full rounded-full py-6" onClick={save} disabled={!canSave}>{t("save")}</Button>
+      <Button
+        className="w-full rounded-full py-6"
+        onClick={save}
+        disabled={!canSave}
+      >
+        {t("save")}
+      </Button>
     </div>
   );
 }
