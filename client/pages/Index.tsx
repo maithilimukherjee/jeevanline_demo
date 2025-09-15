@@ -14,6 +14,7 @@ export default function Index() {
         t("symptomChecker"),
         t("healthJournal"),
         t("prescriptionPassbook"),
+        t("teleconsult"),
         t("pharmacyFinder"),
         t("emergencyHelp"),
         t("learningHub"),
@@ -58,6 +59,12 @@ export default function Index() {
             emoji="💊"
             label={t("pharmacyFinder")}
             color="bg-indigo-600"
+          />
+          <AppTile
+            to="/teleconsult"
+            emoji="📞"
+            label={t("teleconsult")}
+            color="bg-teal-600"
           />
           <AppTile
             to="/emergency"
