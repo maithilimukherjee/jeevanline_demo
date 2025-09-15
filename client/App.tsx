@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Journal from "./pages/Journal";
 import SymptomChecker from "./pages/SymptomChecker";
-import DoctorConnect from "./pages/DoctorConnect";
+import PrescriptionPassbook from "./pages/PrescriptionPassbook";
 import PharmacyFinder from "./pages/PharmacyFinder";
 import EmergencyHelp from "./pages/EmergencyHelp";
 import LearningHub from "./pages/LearningHub";
@@ -29,7 +29,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/journal" element={<Journal />} />
             <Route path="/symptom" element={<SymptomChecker />} />
-            <Route path="/doctor" element={<DoctorConnect />} />
+            <Route path="/passbook" element={<PrescriptionPassbook />} />
             <Route path="/pharmacy" element={<PharmacyFinder />} />
             <Route path="/emergency" element={<EmergencyHelp />} />
             <Route path="/learning" element={<LearningHub />} />
