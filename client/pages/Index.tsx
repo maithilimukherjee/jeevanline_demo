@@ -13,7 +13,7 @@ export default function Index() {
       const items = [
         t("symptomChecker"),
         t("healthJournal"),
-        t("doctorConnect"),
+        t("prescriptionPassbook"),
         t("pharmacyFinder"),
         t("emergencyHelp"),
         t("learningHub"),
@@ -35,7 +35,7 @@ export default function Index() {
         <div className="grid grid-cols-2 gap-4">
           <AppTile to="/symptom" emoji="🤖" label={t("symptomChecker")} color="bg-emerald-600"/>
           <AppTile to="/journal" emoji="📒" label={t("healthJournal")} color="bg-sky-600"/>
-          <AppTile to="/doctor" emoji="👨‍⚕" label={t("doctorConnect")} color="bg-green-700"/>
+          <AppTile to="/passbook" emoji="📔" label={t("prescriptionPassbook")} color="bg-green-700"/>
           <AppTile to="/pharmacy" emoji="💊" label={t("pharmacyFinder")} color="bg-indigo-600"/>
           <AppTile to="/emergency" emoji="🚨" label={t("emergencyHelp")} color="bg-red-600" urgent/>
           <AppTile to="/learning" emoji="📚" label={t("learningHub")} color="bg-amber-500"/>
