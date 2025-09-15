@@ -77,14 +77,14 @@ const dict: Dictionary = {
     PA: "CHW ਨੂੰ ਜਰਨਲ ਭੇਜੋ",
   },
   graph7d: { EN: "7-day Trend", HI: "7-दिन रुझान", PA: "7-ਦਿਨ ਰੁਝਾਨ" },
-  quiz: { EN: "Symptom Quiz", HI: "लक्षण प्रश्नोत्तरी", PA: "ਲੱਛਣ ਪ੍ਰਸ਼ਨੋਤਰੀ" },
+  quiz: { EN: "Symptom Quiz", HI: "लक्षण प्रश्नोत��तरी", PA: "ਲੱਛਣ ਪ੍ਰਸ਼ਨੋਤਰੀ" },
   yes: { EN: "Yes", HI: "हाँ", PA: "ਹਾਂ" },
   no: { EN: "No", HI: "नहीं", PA: "ਨਹੀਂ" },
   intensity: { EN: "Intensity", HI: "तीव्रता", PA: "ਤੀਬਰਤਾ" },
   stepOf: { EN: "Step {x} of {y}", HI: "कदम {x} / {y}", PA: "ਕਦਮ {x} / {y}" },
   probable: {
     EN: "Probable Conditions",
-    HI: "संभावि��� स्थितियाँ",
+    HI: "संभावित स्थितियाँ",
     PA: "ਸੰਭਾਵਿਤ ਹਾਲਤਾਂ",
   },
   preventive: { EN: "Preventive", HI: "निवारक", PA: "ਰੋਕਥਾਮ" },
@@ -103,13 +103,13 @@ const dict: Dictionary = {
   sendLogCHW: {
     EN: "Send Log to CHW",
     HI: "सीएचडब्ल्यू को ल���ग भेजें",
-    PA: "ਲਾਗ CHW ਨੂੰ ਭੇਜੋ",
+    PA: "ਲਾਗ CHW ਨੂ��� ਭੇਜੋ",
   },
   queue: { EN: "Queue", HI: "कतार", PA: "ਕਤਾਰ" },
   filters: { EN: "Filters", HI: "फ़िल्टर", PA: "ਫਿਲਟਰ" },
   newCases: { EN: "New", HI: "नया", PA: "ਨਵਾਂ" },
   followUps: { EN: "Follow-ups", HI: "फॉलो-अप", PA: "ਫਾਲੋ-ਅੱਪ" },
-  chwRef: { EN: "CHW Referrals", HI: "सीएचडब्ल्यू रेफरल", PA: "CHW ਰੈ���ਰਲ" },
+  chwRef: { EN: "CHW Referrals", HI: "सीएचडब्ल्यू रेफरल", PA: "CHW ਰੈਫਰਲ" },
   communityRoom: {
     EN: "Join Community Room",
     HI: "कम्युनिटी रूम में जुड़ें",
@@ -134,7 +134,7 @@ const dict: Dictionary = {
     HI: "विकल्प सुझाएँ",
     PA: "ਵਿਕਲਪ ਸੁਝਾਓ",
   },
-  callHelp: { EN: "Call for Help", HI: "मदद के लिए कॉल", PA: "���ਦਦ ਲਈ ਕਾਲ" },
+  callHelp: { EN: "Call for Help", HI: "मदद के लिए कॉल", PA: "ਮਦਦ ਲਈ ਕਾਲ" },
   requestTransport: {
     EN: "Request Transport Aid",
     HI: "परिवहन सहायता का अनुरोध",
@@ -159,6 +159,10 @@ const dict: Dictionary = {
   groupRooms: { EN: "Community Rooms", HI: "कम्युनिटी रूम", PA: "ਕਮਿਊਨਿਟੀ ਰੂਮ" },
   byCondition: { EN: "by condition", HI: "स्थिति के अनुसार", PA: "ਹਾਲਤ ਅਨੁਸਾਰ" },
   noRooms: { EN: "No active rooms", HI: "कोई सक्रिय रूम नहीं", PA: "ਕੋਈ ਸਰਗਰਮ ਰੂਮ ਨਹੀਂ" },
+  doctorAppointed: { EN: "Doctor appointed", HI: "डॉक्टर नियुक्त", PA: "ਡਾਕਟਰ ਨਿਯੁਕਤ" },
+  waitingTime: { EN: "Waiting time", HI: "प्रतीक्षा समय", PA: "ਇੰਤਜ਼ਾਰ ਸਮਾਂ" },
+  audioCall: { EN: "Audio Call", HI: "ऑडियो कॉल", PA: "ਆਡੀਓ ਕਾਲ" },
+  videoCall: { EN: "Video Call", HI: "वीडियो कॉल", PA: "ਵੀਡੀਓ ਕਾਲ" },
 };
 
 const LangContext = createContext<{
