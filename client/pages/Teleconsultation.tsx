@@ -36,23 +36,16 @@ export default function Teleconsultation() {
     <Layout>
       <div className="space-y-5">
         <section className="rounded-2xl border p-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-start justify-between gap-3">
             <div>
-              <div className="text-lg font-bold">{t("teleconsult")}</div>
-              <div className="text-sm opacity-70">{t("estWait")}: ~{estUserWait} min · {t("queuePosition")}: {position + 1}</div>
+              <div className="text-sm opacity-70">{t("doctorAppointed")}</div>
+              <div className="text-lg font-bold">Dr. Sharma (MBBS)</div>
+              <div className="text-sm opacity-70">{t("waitingTime")}: ~{estUserWait} min · {t("queuePosition")}: {position + 1}</div>
             </div>
-            <Button className="rounded-full" onClick={() => alert("Starting secure teleconsult call...")}>{t("startCall")}</Button>
-          </div>
-          <div className="mt-4 space-y-2">
-            {queue.map((p, i) => (
-              <div key={i} className="flex items-center justify-between rounded-xl border p-3">
-                <div>
-                  <div className="font-semibold">{p.name}</div>
-                  <div className="text-xs opacity-70">{p.reason} · {t("estWait")}: {p.minutes} min</div>
-                </div>
-                <TriageBadge level={p.level} />
-              </div>
-            ))}
+            <div className="flex flex-col gap-2 w-40">
+              <Button className="rounded-full w-full" variant="secondary" onClick={() => alert("Starting audio call...")}>{t("audioCall")}</Button>
+              <Button className="rounded-full w-full" onClick={() => alert("Starting video call...")}>{t("videoCall")}</Button>
+            </div>
           </div>
         </section>
 
