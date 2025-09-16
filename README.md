@@ -1,4 +1,4 @@
-# JeevanLine – Telemedicine for Rural India
+# JeevanLine Patient Side App (Prototype)
 
 A mobile‑first, voice‑first telemedicine SPA focused on accessibility for rural India. Built with React, Vite, Tailwind, and TypeScript. Includes offline awareness, triage color system, language toggle (EN | HI | PA), and large touch targets for easy use.
 
@@ -136,5 +136,3 @@ Static/Server build
 - Real teleconsultation via WebRTC/SFU and queued backend
 - CHW dashboards, analytics, reminders, and SMS/WhatsApp bridges (Zapier)
 
-## License
-Copyright © JeevanLine. All rights reserved.
